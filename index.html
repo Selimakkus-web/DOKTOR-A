@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. A · SCP Araştırmacısı</title>
+    <style>
+        /* Sade, beyaz zemin, minimal tipografi */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ffffff;
+            font-family: 'Times New Roman', Georgia, 'Segoe UI', serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        /* Sade logo / başlık */
+        .scp-line {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .scp-line h2 {
+            font-weight: 400;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #2c2c2c;
+        }
+        .scp-line span {
+            font-size: 0.7rem;
+            color: #777;
+            font-family: monospace;
+        }
+
+        /* Profil bloğu - çok sade */
+        .profile {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 1.5rem 0 2rem 0;
+            align-items: flex-start;
+        }
+        .photo {
+            width: 140px;
+            flex-shrink: 0;
+        }
+        .photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #ddd;
+            background: #f5f5f5;
+            object-fit: cover;
+            aspect-ratio: 1 / 1.2;
+        }
+        .bio {
+            flex: 1;
+        }
+        .name {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.25rem;
+            font-family: inherit;
+        }
+        .title {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .info-item {
+            font-size: 0.85rem;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #2c2c2c;
+            width: 100px;
+            display: inline-block;
+        }
+        .info-value {
+            font-family: monospace;
+            color: #1a1a1a;
+        }
+        .redacted {
+            background: #eaeef3;
+            padding: 0 4px;
+            font-family: monospace;
+        }
+
+        /* Paragraf odaklı alanlar */
+        .paragraph-section {
+            margin: 2rem 0;
+        }
+        .paragraph-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .subnote {
+            font-size: 0.85rem;
+            color: #444;
+            border-left: 3px solid #ccc;
+            padding-left: 1rem;
+            margin: 1.2rem 0;
+        }
+
+        /* Büyük not - basit vurgu */
+        .big-note {
+            text-align: center;
+            margin: 2.5rem 0 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        .big-note p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            font-style: italic;
+            color: #2d2d2d;
+            letter-spacing: 0.3px;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            text-align: center;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ececec;
+            margin: 1rem 0;
+        }
+        @media (max-width: 550px) {
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .info-grid {
+                justify-content: center;
+            }
+            .info-label {
+                width: auto;
+                display: block;
+                margin-bottom: 2px;
+            }
+            .paragraph-section p {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Minimal SCP başlığı -->
+    <div class="scp-line">
+        <h2>SCP Vakfı · Araştırma Personeli</h2>
+        <span>dosya no: A-2210-4</span>
+    </div>
+
+    <!-- Profil: görsel + temel bilgiler -->
+    <div class="profile">
+        <div class="photo">
+            <img src="resim/doktora.jpeg" alt="Araştırmacı Doktor A" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20140%20168%22%3E%3Crect%20width%3D%22140%22%20height%3D%22168%22%20fill%3D%22%23f0f0f0%22%2F%3E%3Ctext%20x%3D%2270%22%20y%3D%2284%22%20fill%3D%22%23666%22%20font-size%3D%2212%22%20text-anchor%3D%22middle%22%3EDr.%20A%3C%2Ftext%3E%3C%2Fsvg%3E'">
+        </div>
+        <div class="bio">
+            <div class="name">Araştırmacı Doktor A</div>
+            <div class="title">Baş araştırmacı · Seviye 4 · Anomali Araştırma Birimi</div>
+            <div class="info-grid">
+                <div class="info-item"><span class="info-label">Yaş</span> <span class="info-value"><span class="redacted">████</span></span></div>
+                <div class="info-item"><span class="info-label">Hizmet yılı</span> <span class="info-value">10+</span></div>
+                <div class="info-item"><span class="info-label">Deney sayısı</span> <span class="info-value">40+</span></div>
+                <div class="info-item"><span class="info-label">Rütbe</span> <span class="info-value">Baş araştırmacı</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paragraf odaklı bilgiler (eklenen yeni içerik) -->
+    <div class="paragraph-section">
+        <p>Dr. A, SCP Vakfı bünyesinde on yılı aşkın süredir görev yapan öncü bir anomaliler araştırmacısıdır. Kendisi özellikle biçim değiştiren, bilişsel tehlike oluşturan Euclid ve Keter sınıfı nesneler üzerine uzmanlaşmıştır. Sorumluluğundaki projeler arasında SCP-███, SCP-████ ve SCP-█████'nın yeniden sınıflandırılması yer alır.</p>
+        
+        <p>SCP evreni hakkında bilgi havuzu çok geniştir; Dr. A, bu havuzun sistematik hale getirilmesi ve yeni araştırmacılara aktarılması için “Bilgi Sürekliliği Protokolü”nü geliştirmiştir. Bugüne kadar 40'tan fazla kontrollü deney gerçekleştirmiş ve bu deneylerin 34'ü başarıyla sonuçlanarak anomali yönetim prosedürlerine katkı sağlamıştır.</p>
+
+        <div class="subnote">
+            📖 Vakıf içi değerlendirme: Dr. A'nın analitik yaklaşımı ve kriz anlarında sakin karar verme yeteneği, Site-19'un en güvenilir araştırmacılarından biri olarak anılmasını sağlamıştır.
+        </div>
+
+        <p>Baş araştırmacı unvanına ek olarak, Dr. A aynı zamanda “Sınıflandırma Komitesi” danışmanı ve yeni personel eğitim programlarının kurucu üyesidir. Anomalilerin etik çerçevede incelenmesi konusundaki ısrarı, vakfın standart prosedürlerinin şekillenmesinde önemli rol oynamıştır.</p>
+    </div>
+
+    <!-- Büyükçe not (istenen) -->
+    <div class="big-note">
+        <p>✦ Bizim İçin çok değerli bir araştırmacıdır ✦</p>
+    </div>
+
+    <div class="footer">
+        SCP Vakfı · Resmî Personel Arşivi · Belgeler 5/2210 seviyesinde sınıflandırılmıştır.
+    </div>
+</div>
+</body>
+</html>
